@@ -35,3 +35,10 @@ CSSOM이 트리구조를 갖는 이유는?
    - 렌더링 트리는 페이지 렌더링에 필요한 모든 DOM 컨텐츠와 각 노드에 대한 모든 CSSOM 스타일 정보를 캡처한다.
 2. 뷰포트 내에서 노드의 정확한 위치와 크기를 계산하는 **레이아웃**을 진행한다.
 3. 렌더링 트리의 각 노드를 화면의 픽셀로 변환하는 **페인팅**을 진행한다.
+
+
+
+### 참고 자료
+
+https://developers.google.com/web/fundamentals/performance/critical-rendering-path/constructing-the-object-model?hl=ko
+
