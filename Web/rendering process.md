@@ -8,7 +8,7 @@
 
 ### DOM
 
-![image-20220114150802383](/Users/jeongwon/Library/Application Support/typora-user-images/image-20220114150802383.png)
+![image-20220114150802383](https://github.com/newgardener/TIL/blob/main/Web/images/DOM.png)
 
 1. 변환: 브라우저가 HTML의 원시 바이트를 읽어와서 문자로 변환됨
 2. 토큰화: 브라우저가 문자열을 W3C HTML5 표준에 지정된 고유 토큰으로 변환됨
@@ -19,7 +19,7 @@
 
 ### CSSOM
 
-![Screen Shot 2022-01-14 at 3.40.02 PM](/Users/jeongwon/Desktop/Screen Shot 2022-01-14 at 3.40.02 PM.png)
+![Screen Shot 2022-01-14 at 3.40.02 PM](https://github.com/newgardener/TIL/blob/main/Web/images/CSSOM.png)
 
 HTML과 마찬가지로 CSS도 브라우저가 이해하고 처리할 수 있는 형식으로 변환되어야 한다. CSS 바이트가 문자로 변환된후 차례로 토큰, 노드로 변환되고 마지막으로는 CSSOM이라는 트리구조에 링크됩니다.
 
