@@ -222,6 +222,30 @@ module: {
 
 위 코드는 scss 파이레 대해 scss-loader로 전처리를 한 다음 웹팩에서 CSS 파일을 인식할 수 있게 CSS 로더를 적용하는 코드이다. 
 
+자주 사용되는 로더 종류로는 Babel Loader, Sass Loader, File Loader, TS Loader 등이 있다.
+
 ### Plugin
 
 `plugin`은 웹팩의 기본적인 동작에 추가적인 기능을 제공하는 속성이다. `loader` 는 파일을 해석하고 변환하는 과정에 참여하는 반면 `plugin` 은 해당 결과물의 형태를 바꾸는 역할을 하는 것이다. 
+
+플러그인은 다음과 같이 선언한다.
+
+```js
+// webpack.config.js
+var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+
+module.exports = {
+  plugins: [
+    new HtmlWebpackPlugin()
+  ]
+}
+```
+
+- `HtmlWebpackPlugin`: 웹팩으로 빌드한 결과물로 HTML 파일을 생성해주는 플러그인 
+
+
+
+### 참고
+
+https://joshua1988.github.io/webpack-guide/guide.html
