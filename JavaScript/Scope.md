@@ -64,6 +64,34 @@ foo();
 
 동적 스코프는 프로그램 런타임 도중의 실행 컨텍스트나 호출 컨텍스트에 의해 결정되고 렉시컬 스코프에서는 소스 코드가 작성된 문맥에서 결정된다. 현대 프로그래밍의 대부분의 언어들은 렉시컬 스코프를 따른다.
 
+스코프는 기본적으로 함수를 선언할 때 생성된다. 함수를 선언할 때 함수 내부의 변수들은 현재 자신의 스코프에서 가장 가까운 곳의 변수를 참조한다.
+
+#### Context 원칙
+
+- 코드를 처음 실행하면 모든 것을 포함하는 전역 Context가 생성되고 함수를 호출할 때마다 함수 Context가 생긴다
+- Context가 생성될 때는 Context 안의 변수 객체 (arguments, variable), scope chain, this가 생성된다.
+- Context 생성 후 함수가 실행되는데 사용되는 변수들은 변수 객체 안에서 값을 찾고 없으면 Scope chain에 따라 올라가서 찾는다
+- 함수 실행이 끝나면 해당 Context는 Clousure를 제외하고 삭제된다. 페이지가 종료되면 전역 Context가 삭제된다. 
+
+```js
+var name = 'zero';
+function wow(word){
+  console.log(word + ' ' + name);
+}
+function say(){
+  var name = 'nero';
+  console.log(name);
+  wow('hello');
+}
+say(); // nero \n hello zero
+```
+
+`say()` 함수를 실행할 때의 name은 변수 객체의 variable에서 바로 찾을 수 있어서 nero를 출력한다.
+
+`wow()` 함수를 실행할 때의 name은 변수 객체에 담겨 있지 않으므로 scopeChain을 통해 다음 변수 객체인 global 변수 객체를 추적한다.
+
+global 변수 객체의 variable에서 name를 찾아 zero를 출력한다.
+
 
 
 ### 중첩 스코프
