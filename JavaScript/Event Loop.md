@@ -6,7 +6,7 @@
 
 #### 1. 자바스크립트 엔진의 구성 요소
 
-![image-20220117205644880](/Users/jeongwon/Library/Application Support/typora-user-images/image-20220117205644880.png)
+![image-20220117205644880](https://github.com/newgardener/TIL/blob/main/JavaScript/images/JSEngine.png)
 
 V8과 같은 자바스크립트 엔진은 `Heap`과 단일 호출 스택(`Call Stack`)으로 구성되어 있다.
 
@@ -17,7 +17,7 @@ V8과 같은 자바스크립트 엔진은 `Heap`과 단일 호출 스택(`Call S
 
 #### 2. 런타임 환경
 
-![image-20220117205923519](/Users/jeongwon/Library/Application Support/typora-user-images/image-20220117205923519.png)
+![image-20220117205923519](https://github.com/newgardener/TIL/blob/main/JavaScript/images/EventLoop.png)
 
 비동기 요청은 자바스크립트 엔진을 구동하는 런타임 환경 (브라우저나 Node.js) 가 담당한다.
 
@@ -59,7 +59,7 @@ delay 함수가 10ms보다 더 오래 걸리다고 할지라도 콘솔 창에 ba
 
 코드를 실행할 때 각 시점에서의 호출 스택을 그림으로 그리면 다음과 같다.
 
-![image-20220117210856112](/Users/jeongwon/Library/Application Support/typora-user-images/image-20220117210856112.png)
+![image-20220117210856112](https://github.com/newgardener/TIL/blob/main/JavaScript/images/CallStack.png)
 
 `setTimeout` 함수는 브라우저에게 타이머 이벤트를 요청한 후에 바로 스택에서 제거된다. 그 후에 `foo` 함수가 스택에 추가되고 `foo` 함수가 내부적으로 실행하는 함수들이 스택으로 추가되었다고 제거된다. `foo` 함수의 실행이 끝나면 콜 스택이 비워지고 그 이후에 `baz` 함수가 콜 스택에 추가되어 콘솔에 baz! 가 찍히게 된다.
 
