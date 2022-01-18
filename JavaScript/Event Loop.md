@@ -6,7 +6,7 @@
 
 #### 1. 자바스크립트 엔진의 구성 요소
 
-![image-20220117205644880](/Users/jeongwon/Library/Application Support/typora-user-images/image-20220117205644880.png)
+![image-20220117205644880](https://github.com/newgardener/TIL/blob/main/JavaScript/images/JSEngine.png)
 
 V8과 같은 자바스크립트 엔진은 `Heap`과 단일 호출 스택(`Call Stack`)으로 구성되어 있다.
 
@@ -17,7 +17,7 @@ V8과 같은 자바스크립트 엔진은 `Heap`과 단일 호출 스택(`Call S
 
 #### 2. 런타임 환경
 
-![image-20220117205923519](/Users/jeongwon/Library/Application Support/typora-user-images/image-20220117205923519.png)
+![image-20220117205923519](https://github.com/newgardener/TIL/blob/main/JavaScript/images/EventLoop.png)
 
 비동기 요청은 자바스크립트 엔진을 구동하는 런타임 환경 (브라우저나 Node.js) 가 담당한다.
 
