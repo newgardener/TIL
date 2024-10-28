@@ -62,3 +62,37 @@ class Heap<T> {
     return [...this.heap];
   }
 }
+
+class MinHeap extends Heap<number> {
+  constructor() {
+    super((a, b) => a - b);
+  }
+}
+
+class MaxHeap extends Heap<number> {
+  constructor() {
+    super((a, b) => b - a);
+  }
+}
+
+export function main() {
+  // MinHeap Example:
+  const minHeap = new MinHeap();
+  minHeap.push(5);
+  minHeap.push(3);
+  minHeap.push(7);
+  minHeap.push(1);
+  console.log(`MinHeap: ${minHeap.toArray()}`);
+  console.log(minHeap.pop());
+  console.log(minHeap.pop());
+
+  // MaxHeap Example:
+  const maxHeap = new MaxHeap();
+  maxHeap.push(5);
+  maxHeap.push(3);
+  maxHeap.push(7);
+  maxHeap.push(1);
+  console.log(`MaxHeap: ${maxHeap.toArray()}`);
+  console.log(maxHeap.pop());
+  console.log(maxHeap.pop());
+}
